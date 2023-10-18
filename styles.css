@@ -8,12 +8,29 @@ h1 {
     font-family: 'Toronto Subway';
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
 .navbar > h2 {
     font-family: 'Toronto Subway';
+    line-height: 20px;
+}
+
+.navbar > h3 {
+    font-family: 'Helvetica';
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
 }
 
 #homepagebanner {
     background-image: url();
+    text-align: center;
+    font-size: xxx-large;
 }
 
 /* this is some themery things going on with the site */
