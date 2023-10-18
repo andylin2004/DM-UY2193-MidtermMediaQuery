@@ -47,11 +47,12 @@ h1 {
 #homepage {
     background-image: url("imgs/r19wf.jpg");
     /* makes background image show the left side and more of the bottom via https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
-    background-position: 0% 70%;
+    background-position: 0% 50%;
 }
 
 #earlyyears {
     background-image: url("imgs/irtundergroundsign.jpg");
+    background-position: 0% 50%;
 }
 
 /* this is some themery things going on with the site */
