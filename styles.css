@@ -11,15 +11,14 @@ h1 {
 .navbar {
     display: flex;
     justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: black;
 }
 
 .navbar > h2 {
     font-family: 'Toronto Subway';
     line-height: 20px;
-}
-
-.navbar > h3 {
-    font-family: 'Helvetica';
 }
 
 .navbar a {
@@ -28,9 +27,24 @@ h1 {
 }
 
 #homepagebanner {
-    background-image: url();
+    background-image: url("imgs/r19wf.jpg");
+    /* makes background image show the left side and more of the bottom via https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
+    background-position: 0% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     font-size: xxx-large;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#homepagebanner > h1 {
+    background-color: rgba(0,0,0,0.3);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 /* this is some themery things going on with the site */
@@ -38,4 +52,13 @@ body {
     /* background color to black, foreground color to white */
     background-color: black;
     color: white;
+    font-family: 'Helvetica';
+}
+
+.center {
+    text-align: center;
+}
+
+#leadintocontenthomepage {
+    text-align: center;
 }
