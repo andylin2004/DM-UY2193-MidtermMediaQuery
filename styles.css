@@ -1,0 +1,24 @@
+/* website where i found how to use custom font types here: https://discourse.gohugo.io/t/how-to-use-local-custom-font/40064, but its basically a cool font-face property that you have to supply your own name for the font as well as where the font is */
+@font-face {
+    font-family: "Toronto Subway";
+    src: url("fonts/Toronto-Subway-W01-Regular.ttf");
+}
+
+h1 {
+    font-family: 'Toronto Subway';
+}
+
+.navbar > h2 {
+    font-family: 'Toronto Subway';
+}
+
+#homepagebanner {
+    background-image: url();
+}
+
+/* this is some themery things going on with the site */
+body {
+    /* background color to black, foreground color to white */
+    background-color: black;
+    color: white;
+}
