@@ -62,3 +62,12 @@ body {
 #leadintocontenthomepage {
     text-align: center;
 }
+
+a:link.primarybutton, a:visited.primarybutton {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1vh;
+    margin: 10vh;
+}
