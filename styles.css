@@ -92,3 +92,9 @@ a:link.primarybutton, a:visited.primarybutton {
     padding: 2vh;
     width: 250pt;
 }
+
+#latertimes {
+    background-image: url("imgs/shepave.jpg");
+    /* from https://www.tutorialspoint.com/how-to-change-the-color-of-an-image-to-black-and-white-using-css#:~:text=%22grayscale%22%20filter%20is%20a%20most,be%20fully%20black%20and%20white.; this will make the background image fully black and white */
+    filter: saturate(0%);
+}
