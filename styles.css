@@ -4,44 +4,60 @@
     src: url("fonts/Toronto-Subway-W01-Regular.ttf");
 }
 
-h1 {
-    font-family: 'Toronto Subway';
-}
-
 .navbar {
+    /* flexbox structure for navbar */
     display: flex;
+    /* space around content on both sides */
     justify-content: space-around;
+    /* we want the bar to stick to the absolute top */
     position: sticky;
     top: 0px;
+    /* we also want it to have a black background */
     background-color: black;
 }
 
 .navbar > h2 {
+    /* using the ttc font for the navbar return to homepage link */
     font-family: 'Toronto Subway';
+    /* adjusting the line height because text would otherwise not be aligned */
     line-height: 20px;
 }
 
 .navbar a {
+    /* ensure that all links in navbar show up as white for the themery */
     color: white;
+    /* no text decorations, no link underline */
     text-decoration: none;
 }
 
 .pagebanner {
+    /* we want the background to just stretch if resized, no repeating */
     background-repeat: no-repeat;
     background-size: cover;
+    /* align any text in center, make it white, ensure that theres still some vertical padding for the text */
     text-align: center;
-    font-size: xxx-large;
     color: white;
     padding-top: 10%;
     padding-bottom: 10%;
 }
 
 .pagebanner > h1 {
+    /* banner text has a little transparent background just to make it readable */
     background-color: rgba(0,0,0,0.3);
+    /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
     margin-left: 10%;
     margin-right: 10%;
     padding-left: 5vw;
     padding-right: 5vw;
+    /* make the font huge af, as xxx-large doesn't really cut it */
+    font-size: 90pt;
+}
+
+h1 {
+    /* header 1 uses ttc font */
+    font-family: 'Toronto Subway';
+    /* custom header font size of 32pt */
+    font-size: 32pt;
 }
 
 #homepage {
@@ -51,58 +67,73 @@ h1 {
 }
 
 #earlyyears {
+    /* see hairy styles example, but this is the background image used for early years page */
     background-image: url("imgs/irtundergroundsign.jpg");
+    /* special repositioning things going on so that image shows up properly adn the right content shows up regardless of view size, first seen at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
     background-position: 0% 50%;
 }
 
 #today {
+    /* see hairy styles example, but this is the background image used for today page */
     background-image: url("imgs/34st.JPG");
 }
 
 /* this is some themery things going on with the site */
 body {
-    /* background color to black, foreground color to white */
+    /* background color to black, foreground color to white, font family to helvetica, and font-size to large */
     background-color: black;
     color: white;
     font-family: 'Helvetica';
+    font-size: larger;
 }
 
-.center {
-    text-align: center;
+.main-content {
+    /* via https://developer.mozilla.org/en-US/docs/Web/CSS/min, this will allow me to have main-content use 100% of width in small screens and 750pt in larger ones */
+    width: min(100%, 750pt);
+    /* ensures centering */
+    margin: auto;
 }
 
-#leadintocontenthomepage {
+.center, #leadintocontenthomepage {
+    /* aligns text to center */
     text-align: center;
 }
 
 a:link.primarybutton, a:visited.primarybutton {
+    /* jumplink on bottom of landing page */
+    /* make button background color green */
     background-color: green;
+    /* foreground text color to white */
     color: white;
+    /* no special underlining, but we are bolding it */
     text-decoration: none;
     font-weight: bold;
+    /* add a bit of padding all around the text to make it pop out more */
     padding: 1vh;
 }
 
 .photogrid {
+    /* photogrid is a flexbox, with contents going to new line as needed */
     display: flex;
     flex-wrap: wrap;
 }
 
 .photogrid div img {
+    /* ensure that photos don't get too big */
     width: 250pt;
 }
 
 .photogrid div {
+    /* ensure text doesn't get too wide, centers the content out as needed, and adds a bit of padding around in case content gets too close to the edge */
     padding: 2vh;
     width: 250pt;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #latertimes {
+    /* background image for later times */
     background-image: url("imgs/shepave.jpg");
     /* from https://www.tutorialspoint.com/how-to-change-the-color-of-an-image-to-black-and-white-using-css#:~:text=%22grayscale%22%20filter%20is%20a%20most,be%20fully%20black%20and%20white.; this will make the background image fully black and white */
     filter: saturate(0%);
-}
-
-a {
-    color: white;
 }
