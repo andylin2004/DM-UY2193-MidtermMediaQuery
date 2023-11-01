@@ -16,6 +16,46 @@
     background-color: black;
 }
 
+.pagebanner > h1 {
+    /* banner text has a little transparent background just to make it readable */
+    background-color: rgba(0,0,0,0.3);
+    /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    /* make the font huge af, as xxx-large doesn't really cut it */
+    font-size: 90pt;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        /* flexbox structure for navbar */
+        display: flex;
+        /* we want elements to go down in compressed screen widths */
+        flex-direction: column;
+        /* in compressed situations, all text exists in center */
+        text-align: center;
+        /* we want the bar to stick to the absolute top */
+        position: sticky;
+        top: 0px;
+        /* we also want it to have a black background */
+        background-color: black;
+    }
+
+    .pagebanner > h1 {
+        /* banner text has a little transparent background just to make it readable */
+        background-color: rgba(0,0,0,0.3);
+        /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        /* make the font huge af, as xxx-large doesn't really cut it */
+        font-size: 15vw;
+    }
+}
+
 .navbar > h2 {
     /* using the ttc font for the navbar return to homepage link */
     font-family: 'Toronto Subway';
@@ -41,18 +81,6 @@
     padding-bottom: 10%;
 }
 
-.pagebanner > h1 {
-    /* banner text has a little transparent background just to make it readable */
-    background-color: rgba(0,0,0,0.3);
-    /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    /* make the font huge af, as xxx-large doesn't really cut it */
-    font-size: 90pt;
-}
-
 h1 {
     /* header 1 uses ttc font */
     font-family: 'Toronto Subway';
@@ -76,6 +104,8 @@ h1 {
 #today {
     /* see hairy styles example, but this is the background image used for today page */
     background-image: url("imgs/34st.JPG");
+    /* special repositioning things going on so that image shows up properly and locks into the center regardless of view size, first seen at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
+    background-position: 50% 50%;
 }
 
 /* this is some themery things going on with the site */
@@ -136,4 +166,6 @@ a:link.primarybutton, a:visited.primarybutton {
     background-image: url("imgs/shepave.jpg");
     /* from https://www.tutorialspoint.com/how-to-change-the-color-of-an-image-to-black-and-white-using-css#:~:text=%22grayscale%22%20filter%20is%20a%20most,be%20fully%20black%20and%20white.; this will make the background image fully black and white */
     filter: saturate(0%);
+    /* special repositioning things going on so that image shows up properly and locks into the center, first seen at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
+    background-position: 50% 50%;
 }
