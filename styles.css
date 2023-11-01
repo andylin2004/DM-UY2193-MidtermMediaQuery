@@ -28,34 +28,6 @@
     font-size: 90pt;
 }
 
-@media only screen and (max-width: 767px) {
-    .navbar {
-        /* flexbox structure for navbar */
-        display: flex;
-        /* we want elements to go down in compressed screen widths */
-        flex-direction: column;
-        /* in compressed situations, all text exists in center */
-        text-align: center;
-        /* we want the bar to stick to the absolute top */
-        position: sticky;
-        top: 0px;
-        /* we also want it to have a black background */
-        background-color: black;
-    }
-
-    .pagebanner > h1 {
-        /* banner text has a little transparent background just to make it readable */
-        background-color: rgba(0,0,0,0.3);
-        /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        /* make the font huge af, as xxx-large doesn't really cut it */
-        font-size: 15vw;
-    }
-}
-
 .navbar > h2 {
     /* using the ttc font for the navbar return to homepage link */
     font-family: 'Toronto Subway';
@@ -119,7 +91,7 @@ body {
 
 .main-content {
     /* via https://developer.mozilla.org/en-US/docs/Web/CSS/min, this will allow me to have main-content use 100% of width in small screens and 750pt in larger ones */
-    width: min(100%, 750pt);
+    width: min(95%, 750pt);
     /* ensures centering */
     margin: auto;
 }
@@ -149,8 +121,8 @@ a:link.primarybutton, a:visited.primarybutton {
 }
 
 .photogrid div img {
-    /* ensure that photos don't get too big */
-    width: 250pt;
+    /* ensure that photos don't get too big by ensuring they're taking up 100% of parent div width*/
+    width: 100%;
 }
 
 .photogrid div {
@@ -168,4 +140,44 @@ a:link.primarybutton, a:visited.primarybutton {
     filter: saturate(0%);
     /* special repositioning things going on so that image shows up properly and locks into the center, first seen at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
     background-position: 50% 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        /* flexbox structure for navbar */
+        display: flex;
+        /* we want elements to go down in compressed screen widths */
+        flex-direction: column;
+        /* in compressed situations, all text exists in center */
+        text-align: center;
+        /* we want the bar to stick to the absolute top */
+        position: sticky;
+        top: 0px;
+        /* we also want it to have a black background */
+        background-color: black;
+    }
+
+    .pagebanner > h1 {
+        /* banner text has a little transparent background just to make it readable */
+        background-color: rgba(0,0,0,0.3);
+        /* padding and margins of text so that theres still good amount of space between text, the background, and the photo */
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        /* make the font huge af, as xxx-large doesn't really cut it */
+        font-size: 15vw;
+    }
+    
+    .photogrid div {
+        /* div is centered and takes up only 95% of full width */
+        width: 100%;
+    }
+
+    .main-content {
+        /* in compact situations, we lock at 95$ of width */
+        width: 95%;
+        /* ensures centering */
+        margin: auto;
+    }
 }
